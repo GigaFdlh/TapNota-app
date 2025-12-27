@@ -14,10 +14,12 @@ Simple, fast, and reliable for daily cashier operations without internet depende
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="screenshots/splash.png" width="200"/>
-  <img src="screenshots/dashboard.png" width="200"/>
-  <img src="screenshots/cashier.png" width="200"/>
-  <img src="screenshots/products.png" width="200"/>
+  <img src="screenshots/splash.jpeg" width="200"/>
+  <img src="screenshots/dashboard.jpeg" width="200"/>
+  <img src="screenshots/cashier.jpeg" width="200"/>
+  <img src="screenshots/product.jpeg" width="200"/>
+  <img src="screenshots/history.jpeg" width="200"/>
+  <img src="screenshots/settings.jpeg" width="200"/>
 </div>
 
 ---
@@ -66,7 +68,7 @@ Simple, fast, and reliable for daily cashier operations without internet depende
 
 ### Installation
 ```bash
-git https://github.com/GigaFdlh/TapNota-app.git
+git clone https://github.com/GigaFdlh/TapNota-app.git
 cd tapnota
 flutter pub get
 flutter run
@@ -76,17 +78,32 @@ flutter run
 
 ## 📁 Project Structure
 
-(unchanged — already great)
-
 ```
 lib/
-├── models/
-├── providers/
-├── screens/
-├── services/
-├── widgets/
-├── main.dart
-└── utils.dart
+├── models/              # Data models
+│   └── models.dart
+├── providers/           # State management
+│   ├── cart_provider.dart
+│   ├── product_provider.dart
+│   ├── settings_provider.dart
+│   └── transaction_provider. dart
+├── screens/             # UI screens
+│   ├── cashier/         # Cashier module
+│   │   ├── utils/
+│   │   ├── widgets/
+│   │   └── cashier_screen.dart
+│   ├── dashboard/       # Dashboard module
+│   ├── history/         # Transaction history
+│   ├── product/         # Product management
+│   ├── settings/        # App settings
+│   ├── splash/          # Splash screen
+│   └── main_screen.dart
+├── services/            # Business logic
+│   └── storage_service.dart
+├── widgets/             # Shared widgets
+│   └── navbar.dart
+├── main.dart            # App entry point
+└── utils.dart           # Utility functions
 ```
 
 ---
